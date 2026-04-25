@@ -4,7 +4,7 @@ import useCurrencyInfo from "../hooks/useCurrencyInfo.js";
 import BackgroundImage from "../assets/1693840705179.jpg";
 
 const ConvertorHomePage = () => {
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState();
   const [from, setFrom] = useState("inr");
   const [to, setTo] = useState("usd");
   const [convertedAmount, setConvertedAmount] = useState(0);
@@ -25,7 +25,7 @@ const ConvertorHomePage = () => {
   const convert = () => {
     // console.log("currencyInfo: ", currencyInfo[from], " ", currencyInfo[to]);
 
-    setConvertedAmount((amount * currencyInfo[to]).toFixed(2));
+    setConvertedAmount((Number(amount) * Number(currencyInfo[to])).toFixed(2));
   };
 
   const handleSubmit = (e) => {
@@ -61,7 +61,6 @@ const ConvertorHomePage = () => {
                   selectCurrency={from}
                   onAmountChange={(amount) => setAmount(amount)}
                   onCurrencyChange={(currency) => setFrom(currency)}
-                  disabled={currencyKeys.length === 0}
                 />
               </div>
 
@@ -86,6 +85,7 @@ const ConvertorHomePage = () => {
                   onAmountChange={setConvertedAmount}
                   onCurrencyChange={(currency) => setTo(currency)}
                   amountDisabled
+                  currencyDisabled
                 />
               </div>
 

@@ -4,7 +4,6 @@ const useCurrencyInfo = (currency) => {
 
   const [data, setData] = useState({});
   const [effectiveDate, setEffectiveDate] = useState(null);
-  // let url = `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency}.json`
   
   useEffect(() => {
     const url = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${currency}.json`
