@@ -1,4 +1,5 @@
 import useCurrencyInfo from "./hooks/useCurrencyInfo"
+import ConvertorHomePage from "./Pages/ConvertorHomePage"
 
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
   useCurrencyInfo("usd")
   return (
     <>
-      <h1 className="bg-amber-700">Currency Convertor</h1>
+      <ConvertorHomePage />
     </>
   )
 }
