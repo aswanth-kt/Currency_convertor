@@ -4,7 +4,7 @@ import useCurrencyInfo from "../hooks/useCurrencyInfo.js";
 import BackgroundImage from "../assets/1693840705179.jpg";
 
 const ConvertorHomePage = () => {
-  const [amount, setAmount] = useState();
+  const [amount, setAmount] = useState(0);
   const [from, setFrom] = useState("inr");
   const [to, setTo] = useState("usd");
   const [convertedAmount, setConvertedAmount] = useState(0);
