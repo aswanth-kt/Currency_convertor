@@ -9,7 +9,7 @@ function InputBox({
   currencyOptions = [],
   selectCurrency,
   amountDisabled = false,
-  currencyDisabled = false,
+  // currencyDisabled = false,
   className = "",
 }) {
 
@@ -29,7 +29,7 @@ function InputBox({
         <input
           id={amountInputId}
           className={`outline-none w-full bg-transparent py-1.5 ${amountDisabled ? 'cursor-not-allowed' : ''}`}
-          min={0.01}
+          min={0.00}
           type="number"
           placeholder="Amount"
           disabled={amountDisabled}
