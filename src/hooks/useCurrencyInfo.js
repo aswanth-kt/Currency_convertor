@@ -18,10 +18,10 @@ const useCurrencyInfo = (currency) => {
     
   }, [currency])
 
-  console.log("effectiveDate:", effectiveDate);
+  // console.log("effectiveDate:", effectiveDate);
   // console.log("Data:", data);
 
-  return data;
+  return [data, effectiveDate];
 }
 
 export default useCurrencyInfo;
