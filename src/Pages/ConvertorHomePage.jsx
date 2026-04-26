@@ -23,7 +23,8 @@ const ConvertorHomePage = () => {
     }
 
   }
-  console.log("Error: ", error)
+
+  error && console.log("Error: ", error)
 
   const swap = () => {
     // console.log("currencyInfo-swap: ", currencyInfo[from], " ", currencyInfo[to]);
@@ -101,6 +102,12 @@ const ConvertorHomePage = () => {
                 />
               </div>
 
+              {error && (
+                <p className="text-red-500 text-sm mb-4 text-center">
+                  {error}
+                </p>
+              )}
+              
               <button
                 type="submit"
                 className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg"
