@@ -8,10 +8,22 @@ const ConvertorHomePage = () => {
   const [from, setFrom] = useState("inr");
   const [to, setTo] = useState("usd");
   const [convertedAmount, setConvertedAmount] = useState(0);
+  const [error, setError] = useState("");
 
   const [currencyInfo, effectiveDate] = useCurrencyInfo(from);
 
   const currencyKeys = Object.keys(currencyInfo);
+
+  const handleOnAmountChange = (amt) => {
+    if (amt < 0) {
+      setError("Enter valid amount!")
+    } else {
+      setAmount(amt)
+      setError("")
+    }
+
+  }
+  console.log("Error: ", error)
 
   const swap = () => {
     // console.log("currencyInfo-swap: ", currencyInfo[from], " ", currencyInfo[to]);
@@ -59,7 +71,7 @@ const ConvertorHomePage = () => {
                   amount={amount}
                   currencyOptions={currencyKeys}
                   selectCurrency={from}
-                  onAmountChange={(amount) => setAmount(amount)}
+                  onAmountChange={handleOnAmountChange}
                   onCurrencyChange={(currency) => setFrom(currency)}
                 />
               </div>
