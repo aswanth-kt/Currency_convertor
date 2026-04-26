@@ -32,7 +32,7 @@ A simple and responsive currency converter built using **React**. This applicati
 
 ## 🎥 Demo Video
 
-▶️ [Watch the Demo]()
+▶️ [Watch the Demo](https://youtu.be/z8qkGRhLNR0)
 
 ---
 
