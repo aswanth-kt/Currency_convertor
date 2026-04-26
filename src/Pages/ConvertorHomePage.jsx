@@ -43,7 +43,7 @@ const ConvertorHomePage = () => {
           <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
 
             <div className="text-2xl font-bold text-center mb-5 text-white">
-              Currency Convertor
+              Currency Converter
               <p className="text-sm text-white/70 mt-1">
                 Effective Date: {effectiveDate}
               </p>
