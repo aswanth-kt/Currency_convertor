@@ -29,7 +29,6 @@ function InputBox({
         <input
           id={amountInputId}
           className={`outline-none w-full bg-transparent py-1.5 ${amountDisabled ? 'cursor-not-allowed' : ''}`}
-          min={0.00}
           type="number"
           placeholder="Amount"
           disabled={amountDisabled}
